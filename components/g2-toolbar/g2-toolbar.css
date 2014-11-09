@@ -1,0 +1,265 @@
+/*
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+
+
+
+/* set color */
+core-toolbar#menuToolbar{
+  background-color: #27ae60;  
+}
+
+core-toolbar#mainToolbar{
+  background-color: #2ecc71;
+}
+
+#mainHeaderPanel{
+  background-color:#f3f3f3;
+}
+
+#frame {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  border: none;
+}
+
+#drawerPanel, [drawer] {
+  background-color: #e9e9e9;
+}
+
+[drawer] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+[main] {
+  height: 100%;
+}
+
+core-toolbar {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+core-toolbar.medium-tall {
+  height: 144px;
+}
+
+core-toolbar::shadow #bottomBar {
+  height: 80px;
+}
+
+.main-label {
+  padding: 0 0 20px 60px;
+}
+
+/* menu */
+core-menu#menu {
+  padding: 8px 0;
+  margin: 0;
+}
+
+/* menu item */
+polyfill-next-selector { content: 'core-menu#menu core-item'; }
+::content core-item, ::content core-submenu::shadow core-item {
+  height: 56px;
+  padding-left: 60px;
+  font-size: 15px;
+  color: #444;
+  font-weight: normal !important;
+}
+
+polyfill-next-selector { content: 'core-menu#menu core-item.core-selected'; }
+::content core-item.core-selected {
+  background-color: #dedede;
+}
+
+/* card */
+#card {
+  display: block;
+  margin: 64px 120px 60px 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  overflow: hidden;
+  background: #fbfbfb;
+}
+
+#card[hidden] {
+  display: none;
+}
+
+#card.move-up {
+  transition: -webkit-transform 0.38s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: transform 0.38s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+polyfill-next-selector { content: '.hrefButton';}
+::content .hrefButton {
+  position: absolute;
+  z-index: 1;
+}
+
+polyfill-next-selector { content: '.hrefButton:not(.fallback)';}
+::content .hrefButton:not(.fallback) {
+  background-color: #fcfcfc;
+  color: #666464;
+  bottom: -28px;
+  right: 24px;
+}
+
+polyfill-next-selector { content: '.hrefButton.fallback';}
+::content .hrefButton.fallback {
+  right: 24px;
+  top: 13px;
+}
+
+
+polyfill-next-selector { content: '#drawerPanel[narrow] .hrefButton:not(.fallback)';}
+#drawerPanel[narrow] ::content .hrefButton:not(.fallback) {
+  right: 8px;
+}
+
+polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
+#drawerPanel:not([narrow]) ::content .menuButton {
+  display: none;
+}
+
+.element-label {
+  height: 80px;
+  line-height: 80px;
+  padding-left: 24px;
+  background-color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  font-weight: 400;
+  color: #555;
+  background-color: #fbfbfb;
+}
+
+/* g2-fab */
+g2-fab {
+  color: #fff;
+  margin-right:1em;
+}
+
+g2-fab.red {
+  background:#e11a00;
+}
+g2-fab.blue {
+  background: #5677fc;
+}
+g2-fab.green {
+  background: #259b24;
+}
+g2-fab.yellow {
+  background: #ffeb3b;
+}
+g2-fab.black {
+  background: #333;
+}
+g2-fab.white {
+  background:white;
+}
+
+g2-fab.color-red {
+  color:#e11a00;
+}
+g2-fab.color-blue {
+  color:#5677fc;
+}
+g2-fab.color-black {
+  color: #333;
+}
+g2-fab.color-white {
+  color:white;
+}
+
+
+g2-fab.over{
+  position: absolute;
+  z-index: 1;
+  right:12px;
+  top: 40px;
+}
+
+
+/* layout */
+#menuTitle{
+  font-size:28px;
+  font-family:Mv Boli,Papyrus,Comic Sans MS;
+  left:24px;
+  bottom:5px;
+}
+
+footer.copyright{
+  clear:both;
+  text-align:center;
+  font-size:10px;
+  bottom:0;
+  width:780px;
+  height:20px;
+  color:#989898;
+  font-size:14px
+}
+footer.copyright a{
+  color:#666
+}
+
+#over-right{
+  position: absolute;
+  z-index: 1;
+  right:2px;
+  top: 40px;
+}
+
+#over-bottom{
+  position: fixed;
+  z-index: 1;
+  right:2%;
+  bottom:4%;
+}
+
+/* narrow layout */
+#drawerPanel[narrow] [main] {
+  background-color: #f8f8f8;
+}
+
+#drawerPanel[narrow] #card {
+  margin: 0;
+  box-shadow: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#drawerPanel[narrow] #frame {
+  min-height: 100%;
+}
+
+#drawerPanel[narrow] #frameContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+#sharePanel{
+  padding: 10px 14px;
+  margin-top: 30px;
+}
+
+#sharePanel p{
+  font-size: 20px;
+}

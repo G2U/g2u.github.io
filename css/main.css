@@ -1,0 +1,32 @@
+
+body {
+  background-color:#F4F4F4;
+  font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+  Meiryo, "メイリオ", sans-serif;
+  color: #333;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+paper-item.colored {
+  color: #43ccd3;
+}
+
+paper-item.blue-ripple::shadow #ripple {
+  color: #43ccd3;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 4px;
+    width: ;
+    height: 16px;
+    background-color: #fafafa;
+    color: #898989;
+    font-size: 14px;
+}

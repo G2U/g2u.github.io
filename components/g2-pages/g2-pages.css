@@ -1,0 +1,192 @@
+
+::selection {
+	background:rgba(1210,106,255,0.5);
+}
+::-moz-selection {
+	background:rgba(210,106,255,0.5);
+}
+
+
+body {
+  font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+  Meiryo, "メイリオ", sans-serif;
+  color: #333;
+  padding:10px 20px;
+  /* can't select/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  */
+}
+
+.hover-effect,
+.hover-effect::before,
+.hover-effect::after,
+.hover-effect paper-item,
+.hover-effect paper-item::before,
+.hover-effect paper-item::after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.hover-effect.hover1:hover{
+  color: #e100c6;
+  text-decoration: none;
+}
+
+.hover-effect.hover2 paper-item:hover{
+  color: #e100c6;
+  text-decoration: none;
+}
+
+#fromquote{
+  text-align: right;
+}
+
+section{
+  width:300px;
+  padding:20px;
+}
+
+paper-ripple.yellow-ripple{
+  color: #ffe21f;
+}
+
+paper-ripple.yellow-ripple::shadow #ripple {
+  color: #ffe21f;
+}
+
+paper-item {
+  width: 320px;
+}
+
+
+.card.avatar{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  height: 280px;
+  background-color: #fff;
+  background: url(img/avatar.png);
+  background-size:contain;
+  background-repeat:no-repeat; 
+  color: #fff;
+  margin-right:40px;
+}
+
+.card.avatar.midium{
+  width: 200px;
+  height: 200px;
+}
+
+.card.avatar.mini{
+  width: 100px;
+  height: 100px;
+}
+
+#descriptionPanel{
+  font-family:Mv Boli, Segoe Print, Apple LiSung, Comic Sans MS;
+  color:#333;
+  font-size:22px;
+  margin-top:0;
+  padding-right:20px;
+}
+
+#descriptionPanel p.top-text{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size:30px;
+  color: #2f2f2f;
+}
+
+#avatarHome{
+  margin-bottom: 40px;
+}
+
+#descriptionPanel p span.en1{
+  font-size:30px;
+}
+
+#descriptionPanel p span.en2{
+  font-size:26px;
+}
+
+#descriptionPanel p span.en3{
+  font-size:22px;
+}
+
+#descriptionPanel p span.blue{
+  color:#1500ad;
+}
+
+#descriptionPanel p span.red{
+  color:#ad1500;
+}
+
+#descriptionPanel p span.orange{
+  color:#ff822b;
+}
+
+#descriptionPanel p span.green{
+  color:#007a0f;
+}
+
+#descriptionPanel p span.yellow{
+  color:#99ad00;
+}
+
+#descriptionPanel p span.brown{
+  color:#ad6b00;
+}
+
+#homePanel,#profilePanel{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 2%;
+}
+
+#avatarProfile{
+  margin-bottom: 40px;
+}
+
+#profileItems{
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+#profileItems core-item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#worksPanel,#linksPanel,#contactPanel{
+  padding:20px 40px;
+}
+
+#linksPanel paper-item{
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+#contactPanel core-item{
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+#worksPanel paper-item{
+  width: 200px;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+#worksPanel p{
+  margin-top: 0;
+  margin-left:30px; 
+}
