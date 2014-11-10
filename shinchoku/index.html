@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+Copyright (c) 2014 @G2U All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <title>shinchoku-check</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="../components/platform/platform.js"></script>
+    
+    <link rel="import" href="../components/paper-button/paper-button.html">
+    <link rel="import" href="../components/shinchoku-check/shinchoku-check.html">
+
+    <style>
+
+    body{
+      padding: 40px;
+    } 
+
+    paper-button{
+      min-width: 200px;
+    }
+    paper-button[raised].colored {
+      background: #4285f4;
+      color: #fff;
+    }
+
+    .topShinchoku{
+      font-size: 100px;
+    }
+
+    </style>
+  </head>
+
+  <body unresolved>
+    <p>リロードすると進捗するかも。</p>
+    <shinchoku-check class="topShinchoku" numerator='3' denominator="20"></shinchoku-check>
+
+    <br>
+    <br>
+
+    <p>クリックすると結果が変わるかも</p>
+
+    <paper-button onclick="buttonClick()" raised>
+    <shinchoku-check id="shinchokuPanel" denominator="2"></shinchoku-check>
+    </paper-button>
+
+    <paper-button onclick="buttonClick2()" raised>
+    <shinchoku-check id="shinchokuPanel2" denominator="5"  failed='うーんこの' success='あ＾～いいっすね＾～'></shinchoku-check>
+    </paper-button>
+
+    <br>
+    <br>
+  </body>
+<script>
+element.updateMessage();
+
+function buttonClick() {
+    var element = document.getElementById("shinchokuPanel");
+    element.updateMessage();
+}
+
+function buttonClick2() {
+    var element = document.getElementById("shinchokuPanel2");
+    element.updateMessage();
+}
+</script>
+</html>

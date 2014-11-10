@@ -1,0 +1,109 @@
+<!--
+Copyright (c) 2014 @G2U All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!--
+This element check your Shinchoku. It's a Japanese joke.
+
+Example:
+
+    <shinchoku-check　numerator='2' denominator='5'></shinchoku-check>
+
+Set your original message.
+
+Example:
+
+    <shinchoku-check denominator='5' failed='うーんこの'　success='あ^~いいっすね^~'></shinchoku-check>
+
+@group Shinchoku Elements
+@element shinchoku-check
+@homepage github.io
+-->
+
+<link href='../polymer/polymer.html' rel='import'>
+<link rel="stylesheet" href="shinchoku-check.css">
+
+<polymer-element name='shinchoku-check' attributes='numerator denominator failed success'>
+
+  <template>
+  
+    <link rel='stylesheet' href='shinchoku-check.css'>
+  
+    <div id='shinchokuContainer'>
+      <div id='content' class="fade"><p>{{message}}</p></div>
+    </div>
+    
+  </template>
+  
+  <script>
+  
+    Polymer('shinchoku-check', {
+
+      /**
+       * [this number / denominator] is the probability of success.
+       *
+       * @attribute numerator
+       * @type number
+       * @default 1
+       */
+      numerator: 1,
+      
+      /**
+       * [numerator / this number] is the probability of success.
+       *
+       * @attribute denominator
+       * @type number
+       * @default 3
+       */
+      denominator: 3,
+      
+      /**
+       * This text is failed message.
+       *
+       * @attribute failed
+       * @type string
+       * @default '進捗ダメです＞＜'
+       */
+      failed: '進捗ダメです＞＜',
+      
+      /**
+       * This text is success message.
+       *
+       * @attribute success
+       * @type string
+       * @default '進捗しました'
+       */
+      success: '進捗しました！',
+
+      message: '',
+
+      fade : '',
+      
+      ready: function() {
+        this.updateMessage();
+      },
+
+      /** 
+       * Update message.
+       * @method updateMessage
+       */
+      updateMessage: function(){
+       fade = 'fade';
+       if(Math.floor(Math.random() * this.denominator) < this.numerator){
+          this.message = this.success;
+        } 
+        else{
+          this.message = this.failed;
+        }
+      },
+      
+    });
+    
+  </script>
+  
+</polymer-element>
