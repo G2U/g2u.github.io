@@ -1,0 +1,10 @@
+// green monyomonyo
+  background: rgb(112,193,50); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(112,193,50,1) 2%, rgba(211,226,199,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(2%,rgba(112,193,50,1)), color-stop(100%,rgba(211,226,199,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(112,193,50,1) 2%,rgba(211,226,199,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(112,193,50,1) 2%,rgba(211,226,199,1) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(112,193,50,1) 2%,rgba(211,226,199,1) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(112,193,50,1) 2%,rgba(211,226,199,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c132', endColorstr='#d3e2c7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  

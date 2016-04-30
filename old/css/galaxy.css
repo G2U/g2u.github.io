@@ -1,0 +1,101 @@
+html,
+body {
+	background-image: url("../img/universe.jpg");
+	height: 100%;
+	font-family: "Verdana";
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+button {
+	font-size: 16px;
+	padding: 30px;
+	margin-bottom: : 50px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+button.grass{
+	position: relative;
+	z-index: 2;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background-color: rgba(255, 255, 255, .4);
+	border-radius: 20px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .2), inset 0 1px 1px rgba(255, 255, 255, .7);
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, .4);
+}
+
+button.grass::before,
+button.grass::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+}
+button.grass,
+button.grass::before,
+button.grass::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+button.grass:focus {
+background-color: rgba(179,255,80,.7);
+outline: none;
+}
+button.grass:hover{
+  background-color: rgba(210,255,150,.7);
+}
+p{
+	font-size: 24px;
+	margin: 5px;
+}
+#animation{
+	z-index: 0; 
+}
+#disp {
+	padding: 50px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#99ffffff,EndColorStr=#99ffffff);
+	background-color: rgba(255, 255, 255, 0.6);
+}
+#menu {
+	z-index: 10;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+#loading{
+	margin-top: 50px;
+	color: #A9A9A9;
+	font-size: 50px;
+	text-align: center;
+}
+#contents{
+	display: none;
+}
+img.img-planet{
+	width: 30px;
+	height: 30px;
+}
+p.copy-right{
+	font-size: 14px;
+}
+div.error-message{  
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#99ffffff,EndColorStr=#99ffffff);
+	background-color: rgba(255, 255, 255, 0.6);
+	margin: 50px;
+	font-size: 20px;
+	color: red;
+	text-align: center;
+}
+section:hover{
+	cursor: pointer; 
+}

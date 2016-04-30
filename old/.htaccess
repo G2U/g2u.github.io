@@ -1,0 +1,4 @@
+ErrorDocument 403 http://profile.mohyo.net/error/403
+ErrorDocument 404 http://profile.mohyo.net/error/404
+ErrorDocument 500 http://profile.mohyo.net/error/500
+ErrorDocument 503 http://profile.mohyo.net/error/503

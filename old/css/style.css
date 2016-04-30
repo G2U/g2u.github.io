@@ -1,0 +1,148 @@
+html,
+body {
+  height: 100%;
+  font-family:'Lucida Grande',
+  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+  Meiryo, "メイリオ", sans-serif;
+  color: #111;
+  background-color: black;
+  background-image: url("../img/universe.jpg");
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+a:link,
+a:visited,
+a:active,
+a:hover{
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover{
+  text-shadow:1px 0px 0px #0000ff;
+}
+
+button {
+  font-size: 14px;
+  padding: 4px 10px;
+  margin-bottom: 50px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button.grass{
+  width: 10em;
+  height: 3em;
+  position: relative;
+  z-index: 2;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .2), inset 0 1px 1px rgba(255, 255, 255, .7);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, .4);
+}
+
+button.grass::before,
+button.grass::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+}
+button.grass,
+button.grass::before,
+button.grass::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+button.grass:focus {
+background-color: rgba(255,255,255,.9);
+outline: none;
+}
+button.grass:hover{
+  background-color: rgba(255,255,255,.85);
+}
+p{
+  font-size: 24px;
+  margin: 5px;
+}
+i{
+  margin-right: 5px;
+}
+ul{
+  font-size: 20px;
+  list-style: none;
+  margin: 10px;
+}
+span{
+  font-size: 14px;
+  margin: 5px;
+}
+#animation{
+  z-index: 0; 
+}
+#disp,#about,#blog,#works {
+  padding: 50px;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#99ffffff,EndColorStr=#99ffffff);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#menu {
+  z-index: 10;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+img.img-leaf{
+  width: 200px;
+  height: 200px;
+}
+p.copy-right{
+  color: #ccc;
+  font-size: 14px;
+}
+p.explain{
+  margin-left: 20px; 
+  font-size: 16px;
+}
+div.error-message{  
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#99ffffff,EndColorStr=#99ffffff);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 50px;
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+
+section:hover{
+  cursor: pointer;  
+/*  background-color: transparent;
+  border: 6px ridge #70AA32;
+  box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+*/
+/*  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+  position:absolute;
+*/
+}
+section:active{
+
+}
